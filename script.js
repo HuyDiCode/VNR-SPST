@@ -138,15 +138,60 @@ function initScrollReveal() {
    ============================================================ */
 
 const G2_DATA = [
-  { id: 1, answer: "CÂNBẰNG", question: "Thay vì chọn nghiêng về một phe, chiến lược 'làm bạn với tất cả' giúp Việt Nam duy trì được trạng thái gì trên bàn cờ địa chính trị?" },
-  { id: 2, answer: "TÀICHÍNH", question: "Lĩnh vực nào đã chứng kiến một 'cơn bão' quét qua châu Á năm 1997, thử thách khả năng phòng thủ vĩ mô của Việt Nam lúc bấy giờ?" },
-  { id: 3, answer: "CHỦQUYỀN", question: "Nghị quyết 07-NQ/TW (2001) vạch ra 'lằn ranh đỏ': Dù mở cửa sâu rộng đến đâu cũng tuyệt đối không được đánh đổi thứ này của quốc gia?" },
-  { id: 4, answer: "ANNINH", question: "Cánh cửa mở ra năm 1997 mang đến một không gian tự do vô tận, nhưng đồng thời buộc Việt Nam lần đầu tiên phải đối mặt với khái niệm bảo vệ (...) trên không gian ảo." },
-  { id: 5, answer: "NỘILỰC", question: "Trước khi muốn vươn ra cạnh tranh bằng nguồn lực bên ngoài, Đại hội VIII (1996) khẳng định Việt Nam phải xây dựng được nền móng vững chắc từ đâu?" },
-  { id: 6, answer: "HOAKỲ", question: "Đối tác nào đã cùng Việt Nam ký kết một văn kiện dài hơn 300 trang vào năm 2000, tạo ra cú hích lớn nhất để xóa bỏ hoàn toàn tàn dư cấm vận?" },
-  { id: 7, answer: "ĐỊNHHƯỚNG", question: "Đại hội IX (2001) đã đặt thêm một cụm từ quan trọng làm 'bánh lái' cho mô hình Kinh tế thị trường, đảm bảo con tàu không chệch quỹ đạo. Cụm từ đó là gì?" },
-  { id: 8, answer: "DOANHNGHIỆP", question: "Đạo luật ra đời năm 1999 được ví như một cuộc 'tháo cũi sổ lồng', chính thức cởi trói và giải phóng năng lượng khổng lồ cho khu vực tư nhân. Đó là luật gì?" },
-  { id: 9, answer: "DUNGQUẤT", question: "Công trình trọng điểm nào khởi công năm 2005 là minh chứng rõ ràng nhất cho việc Việt Nam không muốn mãi phụ thuộc vào việc xuất khẩu tài nguyên thô?" },
+  {
+    id: 1,
+    answer: "CÂNBẰNG",
+    question:
+      "Thay vì chọn nghiêng về một phe, chiến lược 'làm bạn với tất cả' giúp Việt Nam duy trì được trạng thái gì trên bàn cờ địa chính trị?",
+  },
+  {
+    id: 2,
+    answer: "TÀICHÍNH",
+    question:
+      "Lĩnh vực nào đã chứng kiến một 'cơn bão' quét qua châu Á năm 1997, thử thách khả năng phòng thủ vĩ mô của Việt Nam lúc bấy giờ?",
+  },
+  {
+    id: 3,
+    answer: "CHỦQUYỀN",
+    question:
+      "Nghị quyết 07-NQ/TW (2001) vạch ra 'lằn ranh đỏ': Dù mở cửa sâu rộng đến đâu cũng tuyệt đối không được đánh đổi thứ này của quốc gia?",
+  },
+  {
+    id: 4,
+    answer: "ANNINH",
+    question:
+      "Cánh cửa mở ra năm 1997 mang đến một không gian tự do vô tận, nhưng đồng thời buộc Việt Nam lần đầu tiên phải đối mặt với khái niệm bảo vệ (...) trên không gian ảo.",
+  },
+  {
+    id: 5,
+    answer: "NỘILỰC",
+    question:
+      "Trước khi muốn vươn ra cạnh tranh bằng nguồn lực bên ngoài, Đại hội VIII (1996) khẳng định Việt Nam phải xây dựng được nền móng vững chắc từ đâu?",
+  },
+  {
+    id: 6,
+    answer: "HOAKỲ",
+    question:
+      "Đối tác nào đã cùng Việt Nam ký kết một văn kiện dài hơn 300 trang vào năm 2000, tạo ra cú hích lớn nhất để xóa bỏ hoàn toàn tàn dư cấm vận?",
+  },
+  {
+    id: 7,
+    answer: "ĐỊNHHƯỚNG",
+    question:
+      "Đại hội IX (2001) đã đặt thêm một cụm từ quan trọng làm 'bánh lái' cho mô hình Kinh tế thị trường, đảm bảo con tàu không chệch quỹ đạo. Cụm từ đó là gì?",
+  },
+  {
+    id: 8,
+    answer: "DOANHNGHIỆP",
+    question:
+      "Đạo luật ra đời năm 1999 được ví như một cuộc 'tháo cũi sổ lồng', chính thức cởi trói và giải phóng năng lượng khổng lồ cho khu vực tư nhân. Đó là luật gì?",
+  },
+  {
+    id: 9,
+    answer: "DUNGQUẤT",
+    question:
+      "Công trình trọng điểm nào khởi công năm 2005 là minh chứng rõ ràng nhất cho việc Việt Nam không muốn mãi phụ thuộc vào việc xuất khẩu tài nguyên thô?",
+  },
 ];
 
 const G2_KEYWORD = "BIỂNLỚN";
@@ -166,7 +211,9 @@ function g2ShowToast(msg, success = false) {
   clearTimeout(g2ToastTimer);
   el.textContent = msg;
   el.className = success ? "g2-show g2-success" : "g2-show";
-  g2ToastTimer = setTimeout(() => { el.className = ""; }, 2800);
+  g2ToastTimer = setTimeout(() => {
+    el.className = "";
+  }, 2800);
 }
 
 function g2FlashInput(cls) {
@@ -261,7 +308,12 @@ function g2SelectRow(id) {
     return;
   }
 
-  if (id === 5 && document.querySelector('.g2-cr-row[data-id="5"]').classList.contains("g2-locked")) {
+  if (
+    id === 5 &&
+    document
+      .querySelector('.g2-cr-row[data-id="5"]')
+      .classList.contains("g2-locked")
+  ) {
     g2ShowToast("🔒 Trả lời đúng 8 hàng còn lại để mở khoá hàng này!");
     return;
   }
@@ -271,8 +323,12 @@ function g2SelectRow(id) {
 
   g2SelectedId = id;
 
-  document.querySelectorAll(".g2-cr-row").forEach((r) => r.classList.remove("g2-active"));
-  document.querySelector(`.g2-cr-row[data-id="${id}"]`).classList.add("g2-active");
+  document
+    .querySelectorAll(".g2-cr-row")
+    .forEach((r) => r.classList.remove("g2-active"));
+  document
+    .querySelector(`.g2-cr-row[data-id="${id}"]`)
+    .classList.add("g2-active");
 
   g2SetTileHint(id);
 
@@ -303,7 +359,9 @@ function g2ClearTileHint(id) {
 function g2RevealRow(id) {
   const item = G2_DATA.find((d) => d.id === id);
   const chars = [...item.answer];
-  const cells = document.querySelectorAll(`.g2-cr-row[data-id="${id}"] .g2-cell`);
+  const cells = document.querySelectorAll(
+    `.g2-cr-row[data-id="${id}"] .g2-cell`,
+  );
 
   cells.forEach((cell, i) => {
     setTimeout(() => {
@@ -312,11 +370,14 @@ function g2RevealRow(id) {
     }, i * 80);
   });
 
-  setTimeout(() => {
-    const row = document.querySelector(`.g2-cr-row[data-id="${id}"]`);
-    row.classList.remove("g2-active");
-    row.classList.add("g2-solved");
-  }, chars.length * 80 + 260);
+  setTimeout(
+    () => {
+      const row = document.querySelector(`.g2-cr-row[data-id="${id}"]`);
+      row.classList.remove("g2-active");
+      row.classList.add("g2-solved");
+    },
+    chars.length * 80 + 260,
+  );
 }
 
 /* ── Fade out image tile ────────────────────────────────── */
@@ -354,7 +415,10 @@ function g2SubmitAnswer() {
 
   const input = document.getElementById("g2-ans-input");
   const guess = g2Norm(input.value.trim());
-  if (!guess) { input.focus(); return; }
+  if (!guess) {
+    input.focus();
+    return;
+  }
 
   const item = G2_DATA.find((d) => d.id === g2SelectedId);
   const correct = g2Norm(item.answer);
@@ -395,14 +459,17 @@ function g2GuessKeyword() {
 
   if (guess === g2Norm(G2_KEYWORD)) {
     const remaining = Array.from(
-      document.querySelectorAll(".g2-tile:not(.g2-gone)")
+      document.querySelectorAll(".g2-tile:not(.g2-gone)"),
     );
     remaining.forEach((tile, i) => {
       setTimeout(() => tile.classList.add("g2-gone"), i * 130);
     });
-    setTimeout(() => {
-      document.getElementById("g2-win-overlay").classList.add("g2-show");
-    }, remaining.length * 130 + 650);
+    setTimeout(
+      () => {
+        document.getElementById("g2-win-overlay").classList.add("g2-show");
+      },
+      remaining.length * 130 + 650,
+    );
   } else {
     g2FlashInput("g2-wrong");
     g2ShowToast("✗ Từ khoá chưa đúng!");
@@ -443,12 +510,16 @@ function g2InitGate() {
       input.value = "";
       const err = document.getElementById("g2-gate-error");
       err.textContent = "Mật khẩu không đúng. Thử lại.";
-      setTimeout(() => { err.textContent = ""; }, 2500);
+      setTimeout(() => {
+        err.textContent = "";
+      }, 2500);
     }
   }
 
   btn.addEventListener("click", attempt);
-  input.addEventListener("keydown", (e) => { if (e.key === "Enter") attempt(); });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") attempt();
+  });
 }
 
 /* ── Init ───────────────────────────────────────────────── */
@@ -456,22 +527,23 @@ function g2Init() {
   g2BuildCrossword();
   g2BuildTiles();
 
-  document.getElementById("g2-submit-btn")
+  document
+    .getElementById("g2-submit-btn")
     .addEventListener("click", g2SubmitAnswer);
 
-  document.getElementById("g2-kw-btn")
+  document
+    .getElementById("g2-kw-btn")
     .addEventListener("click", g2GuessKeyword);
 
-  document.getElementById("g2-ans-input")
-    .addEventListener("keydown", (e) => {
-      if (e.key !== "Enter") return;
-      // Route Enter: answer current row if one is selected, else try keyword
-      if (g2SelectedId !== null) {
-        g2SubmitAnswer();
-      } else {
-        g2GuessKeyword();
-      }
-    });
+  document.getElementById("g2-ans-input").addEventListener("keydown", (e) => {
+    if (e.key !== "Enter") return;
+    // Route Enter: answer current row if one is selected, else try keyword
+    if (g2SelectedId !== null) {
+      g2SubmitAnswer();
+    } else {
+      g2GuessKeyword();
+    }
+  });
 
   // Build keyword blank-box hint in progress strip
   const hintEl = document.getElementById("g2-kw-hint");
@@ -526,6 +598,7 @@ const MAX_GUESSES = 6;
 
 let wordleState = {
   answer: null,
+  wordIndex: 0,
   wordLength: 0,
   currentRow: 0,
   currentCol: 0,
@@ -536,6 +609,10 @@ let wordleState = {
 };
 
 function initWordle() {
+  const savedIndex = localStorage.getItem("wordleIndex");
+  wordleState.wordIndex = savedIndex ? parseInt(savedIndex) : 0;
+  if (wordleState.wordIndex >= WORDLE_WORDS.length) wordleState.wordIndex = 0;
+
   pickNewWord();
   buildBoard();
   showHint();
@@ -545,7 +622,7 @@ function initWordle() {
 }
 
 function pickNewWord() {
-  const entry = WORDLE_WORDS[Math.floor(Math.random() * WORDLE_WORDS.length)];
+  const entry = WORDLE_WORDS[wordleState.wordIndex];
   wordleState.answer = entry.word.toUpperCase();
   wordleState.wordLength = wordleState.answer.length;
   wordleState.currentRow = 0;
@@ -577,11 +654,9 @@ function buildBoard() {
 function showHint() {
   const hintText = document.getElementById("wordle-hint-text");
   if (!hintText) return;
-  const entry = WORDLE_WORDS.find(
-    (w) => w.word.toUpperCase() === wordleState.answer,
-  );
+  const entry = WORDLE_WORDS[wordleState.wordIndex];
   hintText.textContent = entry
-    ? `${entry.hint} (${wordleState.wordLength} chữ cái)`
+    ? `Câu ${wordleState.wordIndex + 1}/${WORDLE_WORDS.length}: ${entry.hint} (${wordleState.wordLength} chữ cái)`
     : "";
 }
 
@@ -619,6 +694,11 @@ function bindReplay() {
   btn.addEventListener("click", () => {
     hideModal();
     resetKeyboardUI();
+
+    // Increment word index and wrap around
+    wordleState.wordIndex = (wordleState.wordIndex + 1) % WORDLE_WORDS.length;
+    localStorage.setItem("wordleIndex", wordleState.wordIndex);
+
     pickNewWord();
     buildBoard();
     showHint();
