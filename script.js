@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   g2InitGate();
   initWordle();
   initTimelineYearHeaders();
+  initFlashcards();
 });
 
 /* ---------- Tab Switching ---------- */
@@ -965,5 +966,22 @@ function initTimelineYearHeaders() {
 
   yearHeaders.forEach((header) => {
     observer.observe(header);
+  });
+}
+
+/* ---------- Flashcard Flip Effect ---------- */
+function initFlashcards() {
+  // Set answer text for 1997 flashcard
+  const answerEl = document.getElementById("flashcard-answer");
+  if (answerEl) {
+    answerEl.textContent = "Mở cửa là con đường duy nhất để phát triển kinh tế, hội nhập quốc tế và bảo vệ đất nước một cách bền vững hơn. An ninh chỉ toàn mạnh khi nền kinh tế mạnh, khi đó mới có năng lực tự chủ.";
+  }
+
+  // Add flip functionality to all flashcards
+  const flashcards = document.querySelectorAll(".timeline-flashcard");
+  flashcards.forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
   });
 }
