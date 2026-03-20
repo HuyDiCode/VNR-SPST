@@ -1,0 +1,210 @@
+/* ============================================
+   VIETNAM HISTORY 1996-2005 — EDITORIAL THEME
+   NAVBAR STYLES
+   ============================================ */
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--slide-padding-x);
+  background: rgba(45, 74, 62, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(245, 240, 232, 0.3);
+  transition:
+    background 0.4s var(--ease-smooth),
+    border-color 0.4s var(--ease-smooth);
+}
+
+.navbar.dark-mode {
+  background: rgba(30, 58, 47, 0.9);
+  border-bottom-color: rgba(245, 240, 232, 0.2);
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 180px;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-date {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  transition: color 0.4s;
+}
+
+.navbar.dark-mode .nav-date {
+  color: var(--color-text-on-dark);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  position: relative;
+}
+
+.nav-logo-top {
+  font-family: 'Ballet', cursive;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-cream);
+  line-height: 1;
+  transition: color 0.4s;
+  position: absolute;
+  top: 0px;
+  left: -5px;
+  letter-spacing: 0;
+}
+
+.nav-logo-bottom {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-cream);
+  line-height: 1;
+  transition: color 0.4s;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.navbar.dark-mode .nav-logo-top,
+.navbar.dark-mode .nav-logo-bottom {
+  color: var(--color-text-on-dark);
+}
+
+.nav-code {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  transition: color 0.4s;
+  display: none;
+}
+
+.navbar.dark-mode .nav-code {
+  color: var(--color-text-on-dark);
+}
+
+.nav-brand {
+  font-family: var(--font-script);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-dark-green);
+  transition: color 0.4s;
+  display: none;
+}
+
+.navbar.dark-mode .nav-brand {
+  color: var(--color-cream);
+}
+
+/* Nav Tabs */
+.nav-center {
+  display: flex;
+  align-items: center;
+}
+
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  transition: background 0.4s;
+}
+
+.navbar.dark-mode .nav-tabs {
+  background: transparent;
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: rgba(200, 220, 210, 0.9);
+  cursor: pointer;
+  transition: color 0.3s var(--ease-smooth);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav-tab svg {
+  display: none;
+}
+
+.navbar.dark-mode .nav-tab {
+  color: rgba(200, 220, 210, 0.9);
+}
+
+.nav-tab:hover {
+  color: rgba(245, 240, 232, 0.8);
+  background: transparent;
+}
+
+.navbar.dark-mode .nav-tab:hover {
+  color: var(--color-cream);
+  background: transparent;
+}
+
+.nav-tab.active {
+  background: transparent;
+  color: var(--color-cream);
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.navbar.dark-mode .nav-tab.active {
+  background: transparent;
+  color: var(--color-cream);
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.nav-tab svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.nav-tab.active svg {
+  opacity: 1;
+}
+
+/* ---------- TAB CONTENT ---------- */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-smooth);
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}

@@ -1,0 +1,148 @@
+/* ============================================
+   VIETNAM HISTORY 1996-2005 — EDITORIAL THEME
+   RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .intro-grid {
+    gap: 40px;
+  }
+
+  .event-content {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 56px;
+  }
+
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .nav-left,
+  .nav-right {
+    min-width: auto;
+  }
+
+  .nav-date,
+  .nav-code {
+    display: none;
+  }
+
+  .nav-tab span {
+    display: none;
+  }
+
+  .nav-tab {
+    padding: 8px 14px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .intro-visual {
+    order: -1;
+  }
+
+  .map-silhouette {
+    width: 160px;
+  }
+
+  .event-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .event-visual {
+    justify-content: center;
+  }
+
+  .photo-placeholder {
+    width: 160px;
+    height: 130px;
+  }
+
+  .photo-placeholder.dark {
+    width: 200px;
+    height: 160px;
+  }
+
+  .event-desc {
+    max-width: 100%;
+  }
+
+  .timeline-years {
+    gap: 2px;
+  }
+
+  .year-dot small {
+    font-size: 0.55rem;
+  }
+
+  .wordle-tile {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+
+  .key {
+    height: 46px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .nav-brand {
+    font-size: 1.1rem;
+  }
+
+  .event-content.center-text .event-title.giant {
+    font-size: 3rem;
+  }
+
+  .event-year-big {
+    font-size: 4rem;
+  }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-line {
+    animation: none;
+  }
+
+  .map-silhouette {
+    animation: none;
+  }
+}
+
+/* Game 2 Responsive */
+@media (max-width: 700px) {
+  .g2-layout { grid-template-columns: 1fr; }
+
+  .g2-image-panel .g2-img-wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .g2-cell { width: 23px; height: 23px; font-size: 0.66rem; }
+  .g2-rn   { width: 20px; height: 20px; }
+}

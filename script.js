@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initTabSwitching();
   initNavbarDarkMode();
   initScrollReveal();
+  initBoatButton();
   g2InitGate();
   initWordle();
+  initTimelineYearHeaders();
 });
 
 /* ---------- Tab Switching ---------- */
@@ -43,6 +45,19 @@ function initTabSwitching() {
       // Scroll to top
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  });
+}
+
+/* ---------- Boat Departure Button ---------- */
+function initBoatButton() {
+  const btn = document.getElementById("boat-start-btn");
+  if (!btn) return;
+
+  btn.addEventListener("click", () => {
+    const introSlide = document.getElementById("slide-1");
+    if (introSlide) {
+      introSlide.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   });
 }
 
@@ -926,4 +941,29 @@ function showModal(isWin) {
 function hideModal() {
   const modal = document.getElementById("wordle-modal");
   if (modal) modal.style.display = "none";
+}
+
+/* ---------- Timeline Year Headers Scroll Effect ---------- */
+function initTimelineYearHeaders() {
+  const yearHeaders = document.querySelectorAll(".timeline-year-header");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+      rootMargin: "0px 0px 0px 0px",
+    }
+  );
+
+  yearHeaders.forEach((header) => {
+    observer.observe(header);
+  });
 }
